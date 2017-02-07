@@ -16,7 +16,8 @@
 			var n1=parseInt($("#num1").val());
 			var n2=parseInt($("#num2").val());
 			var suma=n1+n2;
-			alert("El resultado de la suma: "+suma);
+			//alert("El resultado de la suma: "+suma);
+			$("#resultado").val(suma);
 
 
 			});
@@ -25,7 +26,7 @@
 	</script>
 </head>
 <body>
-	<div data-role="page" id="Principal">
+	<div data-role="page" id="Principal" data-theme="b">
 		<div data-role="header">
 			<p>Principal</p>
 		</div>	
@@ -47,9 +48,11 @@
 			<p>pie de la aplicación</p>
 		</div>
 	</div>
-	<div data-role="page" id="Contacto">
+	<div data-role="page" id="Contacto" data-theme="a">
 		<div data-role="header">
+		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left">Principal</a>
 		<p>Contacto</p>
+		<a href="#Suma" class="ui-btn ui-icon-plus ui-btn-icon-right">Sumar</a>
 		
 		</div>
 		<div data-role="content">
@@ -58,6 +61,9 @@
 			
 		</div>
 		<div data-role="footer">
+		<a href="http://www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Facebook</a>
+		<a href="http://www.twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Twitter</a>
+		<a href="http://www.instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Instagram</a>
 		<p>Pie de la aplicación</p>			
 		</div>
 	</div>
@@ -69,6 +75,7 @@
 		<div data-role="content">
 			<input type="text" id="num1" placeholder="Escribe un número">	
 			<input type="text" id="num2" placeholder="Escribe un segundo número">	
+			<input type="text" id="resultado" placeholder="Resultado">
 			<input type="button" id="btnSumar" value="Calcular suma">
 		</div>
 		<div data-role="footer">
